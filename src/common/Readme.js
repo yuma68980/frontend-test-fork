@@ -8,9 +8,8 @@ export default function Readme() {
   const [markdown, setMarkdown] = useState("# loading...");
 
   useEffect(() => {
-    fetch(`https://raw.githubusercontent.com/remarkjs/react-markdown/refs/heads/main/readme.md`)
+    fetch(`https://raw.githubusercontent.com/roar-ar/frontend-test/refs/heads/master/README.md`)
       .then((m) => {
-        console.log(m);
         return m.text();
       })
       .then((md) => {

@@ -1,5 +1,5 @@
-import React from 'react'
-import ExpectedImg from '../resources/img/Expected_Question_02.png'
+import React from 'react';
+import ExpectedImg from '../resources/img/Expected_Question_02.png';
 
 /**
  * 【問２】Array 操作
@@ -30,12 +30,16 @@ export default function Question_02() {
     { "name" : "沖縄県", "population" : 1467480 }
   ];
 
-  const result = kyusyu.map((el, index) => {
+  // 人口の降順でソート
+  const sortedKyusyu = kyusyu.sort((a, b) => b.population - a.population);
+
+  // 番号を付与してリストを生成
+  const result = sortedKyusyu.map((el, index) => {
     return (
       <li key={index}>
-        <div>No.</div>
+        <div>No.{index + 1}</div>
         <div>{el.name}</div>
-        <div>{el.population} 人</div>
+        <div>{el.population.toLocaleString()} 人</div>
       </li>
     );
   });

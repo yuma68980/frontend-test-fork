@@ -1,5 +1,5 @@
-import React from 'react'
-import ExpectedImg from '../resources/img/Expected_Question_04.png'
+import React from 'react';
+import ExpectedImg from '../resources/img/Expected_Question_04.png';
 
 /**
  * 【問４】 イベントリスナの設定
@@ -23,9 +23,9 @@ export default function Question_04() {
     <div>
       <h1 className='question-title'>【問４】 イベントリスナの設定</h1>
       <div className='question-content'>
-      {/* ↓↓↓ イベントリスナの設定を書く ↓↓↓ */}
-        <button>押してね</button>
-      {/* ↑↑↑ イベントリスナの設定を書く ↑↑↑ */}
+        {/* ↓↓↓ イベントリスナの設定を書く ↓↓↓ */}
+        <button onClick={handleOnClick}>押してね</button>
+        {/* ↑↑↑ イベントリスナの設定を書く ↑↑↑ */}
       </div>
       <h1 className='question-title'>期待結果 (画像)</h1>
       <img src={ExpectedImg} />

@@ -1,6 +1,5 @@
-import React from 'react'
-import { useState } from 'react';
-import ExpectedImg from '../resources/img/Expected_Question_05.png'
+import React, { useState } from 'react';
+import ExpectedImg from '../resources/img/Expected_Question_05.png';
 
 /**
  * 【問５】 State の管理
@@ -14,13 +13,14 @@ import ExpectedImg from '../resources/img/Expected_Question_05.png'
  * テキストを入力したとき の処理は handleChange で定義されています
  */
 
-export default function Question_04() {
+export default function Question_05() { // 関数名の修正
 
   // state 変数
   const [text, setText] = useState("");
 
   // 入力値に変更が生じたときの処理
   const handleChange = e => {
+    setText(e.target.value); // テキストインプットの値を state に設定
   };
 
   return (
@@ -28,7 +28,7 @@ export default function Question_04() {
       <h1 className='question-title'>【問５】 State の管理</h1>
       <div className='question-content'>
         <input type="text" value={text} onChange={handleChange}/>
-        <p>入力値：<span>aaa</span></p>
+        <p>入力値：<span>{text}</span></p> {/* state の値を表示 */}
       </div>
       <h1 className='question-title'>期待結果 (画像)</h1>
       <img src={ExpectedImg} />

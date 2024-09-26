@@ -1,7 +1,6 @@
-import React from 'react'
-import ExpectedImg from '../resources/img/Expected_Question_03.png'
-
-import ButtonComponent from "./Question_03_Component";
+import React from 'react';
+import ExpectedImg from '../resources/img/Expected_Question_03.png';
+import ButtonComponent from './Question_03_Component'; // ButtonComponent のインポート
 
 /**
  * 【問３】コンポーネント呼出し
@@ -25,9 +24,9 @@ export default function Question_03() {
     <div>
       <h1 className='question-title'>【問３】コンポーネント呼出し</h1>
       <div className='question-content'>
-      {/* ↓↓↓ コンポーネント呼び出しを書く ↓↓↓ */}
-
-      {/* ↑↑↑ コンポーネント呼び出しを書く ↑↑↑ */}
+        {/* ↓↓↓ コンポーネント呼び出しを書く ↓↓↓ */}
+        <ButtonComponent button={button} message={message} />
+        {/* ↑↑↑ コンポーネント呼び出しを書く ↑↑↑ */}
       </div>
       <h1 className='question-title'>期待結果 (画像)</h1>
       <img src={ExpectedImg} />
